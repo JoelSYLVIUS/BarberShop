@@ -7,3 +7,50 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+.fix{
+    position: fixed;
+}
+
+.gold{
+    color: #baa94a;
+}
+
+.oxigen{
+    font-family: 'Oxygen', sans-serif;
+}
+
+.greatvibes{
+    font-family: 'Great Vibes', cursive;
+}
+
+.gh:hover{
+    text-shadow: 0 0 4px #ffffff;
+}
+
+.accueil h1{
+    margin-top: 15%;
+    font-family: 'Great Vibes', cursive;
+    font-size: 90px;
+}
+
+.accueil p{
+    margin-top: 25%;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 30px;
+}
+
+.affichef{
+    width: 100vw;
+    height: 74vh;
+    margin-top: 8vh;
+    background-image: url("../medias/haircut.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header{
+    width: 100vw;
+    height: 15vh;
+}
+

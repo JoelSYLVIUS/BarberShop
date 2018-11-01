@@ -3,7 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Oxygen" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/materialize.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
@@ -15,17 +18,17 @@
             <li class="divider"></li>
             <li><a href="#!">three</a></li>
         </ul>
-        <nav class="transparent">
-            <div class="nav-wrapper grey">
-                <a href="/" class="brand-logo">Logo</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="/team">Team</a></li>
-                    <li><a href="/carte">Carte</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <!-- Dropdown Trigger -->
-                    <!-- <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li> -->
-                </ul>
-            </div>
+        <nav class="transparent fix gold">
+                <div class="nav-wrapper black">
+                    <a href="/" class="brand-logo">Logo</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a class="gold gh" href="/team">Team</a></li>
+                        <li><a class="gold gh" href="/carte">Carte</a></li>
+                        <li><a class="gold gh" href="/contact">Contact</a></li>
+                        <!-- Dropdown Trigger -->
+                        <!-- <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li> -->
+                    </ul>
+                </div>
         </nav>
 
 
@@ -34,17 +37,16 @@
 
         <!-- Footer générale du site -->
         <footer class="page-footer transparent">
-
-            <div class="footer-copyright grey">
-                <div class="container center">
+            <div class="footer-copyright black">
+                <div class="container center gold">
                     © 2018 Tous Droits Réservés&nbsp;-
-                    <a class="grey-text text-lighten-4" href="/mentions-legales">Mentions Légales</a> &nbsp;- <a class="grey-text text-lighten-4 " href="/cgv">CGV</a> &nbsp;
+                    <a class="gold gh" href="/mentions-legales">Mentions Légales</a> &nbsp;- <a class="gold gh" href="/cgv">CGV</a> &nbsp;
                 </div>
             </div>
         </footer>
 
         <script src="{{ asset('js/materialize.js') }}"></script>
-        <script src="{{ asset('js/jquery-3-3-1.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script>
             $(document).ready(function(){
                 $(".dropdown-trigger").dropdown();
