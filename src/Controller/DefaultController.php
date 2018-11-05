@@ -5,6 +5,8 @@ use http\Env\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 
 /**
@@ -46,13 +48,16 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route(path="/profile", methods={"GET"}, name="app_profile")
+     * @Route(path="/profil", methods={"GET"}, name="app_profil")
      *
      * @return string
      */
-    public function profile()
+    public function profil( AuthorizationCheckerInterface $authChecker)
     {
-        return $this->render("default/profile.html.twig");
+        if (false === $authChecker->isGranted('ROLE_USER')) {
+            throw new AccessDeniedException('Unable to access this page!');
+        }
+        return $this->render("default/profil.html.twig");
     }
 
     /**

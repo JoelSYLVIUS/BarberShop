@@ -13,7 +13,7 @@ main {
 }
 
 .gold{
-    color: #baa94a;
+    color: #baa94a!important;
 }
 
 .oxigen{
@@ -28,6 +28,15 @@ main {
     text-shadow: 0 0 4px #ffffff;
 }
 
+.margtop{
+    margin-top: 10%;
+}
+
+.mnmargrl{
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
 .accueil h1{
     margin-top: 15%;
     font-family: 'Great Vibes', cursive;
@@ -38,6 +47,14 @@ main {
     margin-top: 25%;
     font-family: 'Oxygen', sans-serif;
     font-size: 30px;
+}
+
+#dropdown1{
+    top: -100%;
+    width: 20%!important;
+    margin-right: -20%!important;
+    left: 80%!important;
+    background-color: #000000;
 }
 
 .affichef{
