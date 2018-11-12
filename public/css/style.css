@@ -10,6 +10,35 @@ main {
 
 .fix{
     position: fixed;
+    z-index: 10000000;
+}
+.red-crsl{
+    background-image: url("../medias/haircut.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.amber-crsl{
+    background-image: url("../medias/hairdresser.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.green-crsl{
+    background-image: url("../medias/hairdresser1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.blue-crsl{
+    background-image: url("../medias/barber.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .gold{
@@ -66,6 +95,10 @@ main {
     background-position: center;
     background-repeat: no-repeat;
 }
+.carousel{
+    height: 100%!important;
+}
+
 header{
     width: 100vw;
     height: 15vh;
