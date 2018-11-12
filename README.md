@@ -9,12 +9,12 @@ git clone https://github.com/JoelSYLVIUS/BarberShop.git
 ```
 
 ```
-compose install
+composer install
 ```
 
 ### Prerequisites
 
-Once compose install is done, create a database and fill the line 16 in the .env file at the root of the project according to your infos :
+Once composer install is done, create a database and fill the line 16 in the .env file at the root of the project according to your infos :
 
 ```
 DATABASE_URL=mysql://user:mdp@127.0.0.1:8889/Nomdevotrebase
