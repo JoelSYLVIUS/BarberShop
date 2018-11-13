@@ -61,6 +61,11 @@ main {
     margin-top: 10%;
 }
 
+.margbot{
+    margin-bottom: 70px;
+    z-index: 10;
+}
+
 .mnmargrl{
     padding-left: 7%;
     padding-right: 7%;
@@ -104,3 +109,10 @@ header{
     height: 15vh;
 }
 
+.page-footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0!important;
+    margin-bottom: 0;
+    z-index: 0;
+}

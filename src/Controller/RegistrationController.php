@@ -37,7 +37,7 @@ class RegistrationController extends AbstractController
             // ... do any other work - like sending them an email, etc
             // maybe set a "flash" success message for the user
 
-            return $this->render('default/home.html.twig');
+            return $this->render('Front/default/home.html.twig');
         }
 
         return $this->render(

@@ -9,11 +9,19 @@
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}
 
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-            <label for="inputUsername" class="sr-only">Username</label>
-            <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <h1 class="h3 center mb-3 font-weight-normal">Identifie toi pour réserver ta coupe !</h1>
+            <div class="row">
+                <div class="input-field col s6 offset-s3">
+                    <label for="inputUsername" class="sr-only">Username</label>
+                    <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" placeholder="Username"  required autofocus> <!-- value="{#{ error.token.user }#}" -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6 offset-s3">
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                </div>
+            </div>
 
             <input type="hidden" name="_csrf_token"
                    value="{{ csrf_token('authenticate') }}"
@@ -29,10 +37,14 @@
                     </label>
                 </div>
             #}
-
-            <button class="btn btn-lg btn-primary" type="submit">
-                Sign in
-            </button>
+            <div class="row">
+                <div class="input-field col s6 offset-s3 center">
+                    <button class="btn btn-lg btn-primary black gold" type="submit">
+                        Connexion
+                    </button>
+                </div>
+            </div>
+            <p>Vous n'avez pas encore de compte ? <a href="/register">Je crée mon compte!</a></p>
         </form>
     </div>
 {% endblock %}

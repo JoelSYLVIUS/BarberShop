@@ -1,5 +1,9 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    role_hierarchy:
+        ROLE_SUPER_ADMIN: [ROLE_BARBER, ROLE_USER]
+        ROLE_BARBER: ROLE_USER
+
     providers:
         auth_provider:
             entity:
