@@ -3,17 +3,35 @@
 {% block title %}BarberShop - Registration{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <h1 class="center">Registration</h1>
-        <section>
+    <div class="container margtop">
+        <h1 class="center">Inscription</h1>
+        <section class="">
             <div class="center">
-                {{ form_start(form) }}
-                {{ form_row(form.username) }}
-                {{ form_row(form.email) }}
-                {{ form_row(form.plainPassword.first) }}
-                {{ form_row(form.plainPassword.second) }}
+                <div class="row">
+                    <div class="input-field col s12">
+                        {{ form_start(form) }}
+                    </div>
 
-                <button type="submit">Register!</button>
+                    <div class="input-field col s6">
+                        {{ form_row(form.username) }}
+                    </div>
+
+                    <div class="input-field col s6">
+                        {{ form_row(form.email) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 offset-s3">
+                        {{ form_row(form.plainPassword.first) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 offset-s3">
+                        {{ form_row(form.plainPassword.second) }}
+                    </div>
+                </div>
+
+                <button class="btn waves-effect waves-light black gold" type="submit">Valider mon inscription!</button>
                 {{ form_end(form) }}
             </div>
         </section>

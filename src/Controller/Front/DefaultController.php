@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Front;
 use http\Env\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -24,7 +24,7 @@ class DefaultController extends AbstractController
      */
     public function home()
     {
-        return $this->render("default/home.html.twig");
+        return $this->render("Front/default/home.html.twig");
     }
 
     /**
@@ -34,7 +34,7 @@ class DefaultController extends AbstractController
      */
     public function mentionlegale()
     {
-        return $this->render("default/mentionslegales.html.twig");
+        return $this->render("Front/default/mentionslegales.html.twig");
     }
 
     /**
@@ -44,7 +44,7 @@ class DefaultController extends AbstractController
      */
     public function cgv()
     {
-        return $this->render("default/cgv.html.twig");
+        return $this->render("Front/default/cgv.html.twig");
     }
 
     /**
@@ -57,7 +57,7 @@ class DefaultController extends AbstractController
         if (false === $authChecker->isGranted('ROLE_USER')) {
             throw new AccessDeniedException('Unable to access this page!');
         }
-        return $this->render("default/profil.html.twig");
+        return $this->render("Front/default/profil.html.twig");
     }
 
     /**
@@ -67,7 +67,7 @@ class DefaultController extends AbstractController
      */
     public function team()
     {
-        return $this->render("default/team.html.twig");
+        return $this->render("Front/default/team.html.twig");
     }
 
     /**
@@ -77,7 +77,7 @@ class DefaultController extends AbstractController
      */
     public function contact()
     {
-        return $this->render("default/contact.html.twig");
+        return $this->render("Front/default/contact.html.twig");
     }
 
     /**
@@ -87,7 +87,7 @@ class DefaultController extends AbstractController
      */
     public function carte()
     {
-        return $this->render("default/carte.html.twig");
+        return $this->render("Front/default/carte.html.twig");
     }
 
 }
