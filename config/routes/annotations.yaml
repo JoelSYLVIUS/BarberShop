@@ -11,12 +11,4 @@ controllers_front:
     type: annotation
     prefix: /
 
-controllers_front_client:
-    resource: ../../src/Controller/Front/Client
-    type: annotation
-    prefix: /
 
-controllers_back_admin:
-    resource: ../../src/Controller/Back/Admin
-    type: annotation
-    prefix: /
