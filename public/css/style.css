@@ -72,10 +72,10 @@ main {
     padding-right: 7%;
 }
 
-.accueil h1{
+.accueil h2{
     margin-top: 15%;
     font-family: 'Great Vibes', cursive;
-    font-size: 90px;
+    font-size: 90px!important;
 }
 
 .accueil p{
