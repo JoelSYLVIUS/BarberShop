@@ -1,42 +1,40 @@
 # BarberShop
 
-Petit site pour mettre en avant un barber Shop. On y présentera les coiffeurs, les coupes et les clients auron la possibilité de réservé leurs passage au barber.
+A small website intended for a barber Shop. It will be showing off hairdressers, haircuts et clients will be able to make appointments.
 
-## Bien débuter
+## Get started
 
 ```
 git clone https://github.com/JoelSYLVIUS/BarberShop.git
 ```
 
 ```
-compose install
+composer install
 ```
 
-### Prérequis
+### Prerequisites
 
-Une fois le compose install terminer créer si ce n'est pas déjà fait un bdd dans mysql et compléter la ligne 16 du fichier env à la racine suivant avec vos infos: 
+Once composer install is done, create a database and fill the line 16 in the .env file at the root of the project according to your infos :
+
 ```
 DATABASE_URL=mysql://user:mdp@127.0.0.1:8889/Nomdevotrebase
 ```
-Une fois la bdd créer et le fichier configurer, taper la commande suivante qui va créer les tables des entités existant dans le projet:
-```
+Now that the db is created and the .env filled, use the following command which will create tables and entities from the project : 
 
+```
 php bin/console d:s:u --dump-sql --force 
-
 ```
-Une fois la commande exécuter et terminer:
+Then use this one :
 ```
-
 php bin/console s:r
-
 ```
-Et voilà vous pouvez commencer à coder et faire évoluer le projet !!
+It's done you can start to code !!
 
-## Auteurs
+## Authors
 
-* **Joël SYLVIUS** - *Chef de projet* 
+* **Joël SYLVIUS** - *Project leader* 
 
-Vous pouvez retrouver une liste complète de tous nos qui ont participe à la construction de l'application : 
+Here is the list of all the collaborators : 
 
 Rudy LANTOARIJAONA
 
@@ -44,9 +42,11 @@ Yann NOUVE
 
 Antoine LUCAS
 
-## License
+## Licence
 
-Pas de licence pour le moment
-## Mentions spéciales
+NO LICENCE FOR THE MOMENT
 
-* Merci à Justine d'être toujours présente dans nos différents exemples
+## Special Mentions
+
+* Thanks to Justine to be always here in our different examples
+
