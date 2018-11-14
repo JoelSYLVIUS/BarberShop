@@ -12,7 +12,7 @@ trait TimestampTrait
      * @var \DateTime
      *
      * @Gedmo\Timestampable(on="create")
-     * @ORM\Column(type="datetimetz", options={"default"="CURRENT_TIMESTAMP"}, nullable=true)
+     * @ORM\Column(type="datetimetz", options={"default"="CURRENT_TIMESTAMP"})
      */
     private $createdAt;
 
@@ -28,7 +28,7 @@ trait TimestampTrait
      * @var \DateTime
      *
      * @Gedmo\Timestampable(on="update")
-     * @ORM\Column(type="datetimetz", options={"default"="CURRENT_TIMESTAMP"}, nullable=true)
+     * @ORM\Column(type="datetimetz", options={"default"="CURRENT_TIMESTAMP"})
      */
     private $updatedAt;
 
