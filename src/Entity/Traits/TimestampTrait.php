@@ -2,40 +2,117 @@
 
 namespace App\Entity\Traits;
 
+use App\Entity\User;
 use Doctrine\ORM\Mapping as ORM;
-
 use Gedmo\Mapping\Annotation as Gedmo;
-/**
- * Adds created at and updated at timestamps to entities.
- * Entities using this must have HasLifecycleCallbacks annotation.
- *
- * @ORM\HasLifecycleCallbacks
- */
+
 trait TimestampTrait
 {
     /**
-     * @var \DateTime $created
+     * @var \DateTime
      *
      * @Gedmo\Timestampable(on="create")
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetimetz", options={"default"="CURRENT_TIMESTAMP"}, nullable=true)
      */
-    private $created;
+    private $createdAt;
 
     /**
-     * @var \DateTime $updated
+     * @var User|null $createdBy
+     *
+     * @Gedmo\Blameable(on="create")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     */
+    private $createdBy;
+
+    /**
+     * @var \DateTime
      *
      * @Gedmo\Timestampable(on="update")
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetimetz", options={"default"="CURRENT_TIMESTAMP"}, nullable=true)
      */
-    private $updated;
+    private $updatedAt;
 
-    public function getCreated()
+    /**
+     * @var User|null $updatedBy
+     *
+     * @Gedmo\Blameable(on="update")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     */
+    private $updatedBy;
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt(): \DateTime
     {
-        return $this->created;
+        return $this->createdAt;
     }
 
-    public function getUpdated()
+    /**
+     * @param \DateTime $createdAt
+     *
+     * @return TimestampableTrait
+     */
+    public function setCreatedAt(\DateTime $createdAt): self
     {
-        return $this->updated;
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+
+    /**
+     * @return User|null
+     */
+    public function getCreatedBy(): ?User
+    {
+        return $this->createdBy;
+    }
+
+    /**
+     * @param User|null $createdBy
+     *
+     * @return TimestampableTrait
+     */
+    public function setCreatedBy(?User $createdBy): self
+    {
+        $this->createdBy = $createdBy;
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdatedAt(): \DateTime
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param \DateTime $updatedAt
+     *
+     * @return TimestampableTrait
+     */
+    public function setUpdatedAt(\DateTime $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+        return $this;
+    }
+
+    /**
+     * @return User|null
+     */
+    public function getUpdatedBy(): ?User
+    {
+        return $this->updatedBy;
+    }
+
+    /**
+     * @param User|null $updatedBy
+     *
+     * @return TimestampableTrait
+     */
+    public function setUpdatedBy(?User $updatedBy): self
+    {
+        $this->updatedBy = $updatedBy;
+        return $this;
     }
 }
