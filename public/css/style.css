@@ -76,12 +76,16 @@ main {
     margin-top: 15%;
     font-family: 'Great Vibes', cursive;
     font-size: 90px!important;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4%;
 }
 
 .accueil p{
-    margin-top: 25%;
+    margin-top: 2%;
     font-family: 'Oxygen', sans-serif;
-    font-size: 30px;
+    font-size: 25px!important;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2%;
 }
 
 #dropdown1{

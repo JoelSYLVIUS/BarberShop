@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Coupe{% endblock %}
+
+{% block body %}
+    <h1>Coupe</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ coupe.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ coupe.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ coupe.prix }}</td>
+            </tr>
+            <tr>
+                <th>Duree</th>
+                <td>{{ coupe.duree }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ coupe.description }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td>{{ coupe.img }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('coupe_index') }}">back to list</a>
+
+    <a href="{{ path('coupe_edit', {'id': coupe.id}) }}">edit</a>
+
+    {{ include('coupe/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Coupe{% endblock %}
+
+{% block body %}
+    <h1>Create new Coupe</h1>
+
+    {{ include('coupe/_form.html.twig') }}
+
+    <a href="{{ path('coupe_index') }}">back to list</a>
+{% endblock %}
