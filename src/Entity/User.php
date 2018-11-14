@@ -7,14 +7,18 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 use App\Repository\UserRepository;
+use App\Entity\Traits\TimestampTrait;
 
 /**
- * @ORM\Entity(repositoryClass="UserRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @UniqueEntity(fields="email", message="Email already taken")
  * @UniqueEntity(fields="username", message="Username already taken")
  */
 class User implements UserInterface
 {
+
+    use TimestampTrait;
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
