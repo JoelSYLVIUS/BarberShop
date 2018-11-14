@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Back\Admin;
+namespace App\Controller\Back;
 
 use App\Entity\Employee;
 use App\Form\EmployeeType;

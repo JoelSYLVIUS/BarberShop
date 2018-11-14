@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Front\Admin;
+namespace App\Controller\Back;
 
 use App\Entity\Coupe;
 use App\Form\CoupeType;
