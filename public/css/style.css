@@ -40,8 +40,30 @@ main {
     background-size: 100%;
     background-repeat: no-repeat;
 }
+.bg_carte{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../medias/barber.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
+.login_bg{
+    background-color: #ffffff;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+#user_termsAccepted{
+    opacity: 1!important;
+}
 .gold{
+    color: #baa94a!important;
+}
+
+.goldbg{
     color: #baa94a!important;
 }
 
@@ -56,6 +78,13 @@ main {
 
 .gh:hover{
     text-shadow: 0 0 4px #ffffff;
+}
+
+.padtop{
+    padding-top: 10px;
+}
+.padbot{
+    padding-bottom: 30px;
 }
 
 .margtop{
@@ -122,3 +151,4 @@ header{
     margin-bottom: 0;
     z-index: 0;
 }
+

@@ -4,7 +4,7 @@
 
 {% block body %}
     <div class="container margtop">
-        <form method="post">
+        <form method="post" class="login_bg">
             {% if error %}
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}

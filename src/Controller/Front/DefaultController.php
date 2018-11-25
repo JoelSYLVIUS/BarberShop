@@ -24,7 +24,9 @@ class DefaultController extends AbstractController
      */
     public function home()
     {
-        return $this->render("Front/default/home.html.twig");
+        return $this->render("Front/default/home.html.twig",[
+            'bg' => "bg_carte",
+        ]);
     }
 
     /**
@@ -34,7 +36,9 @@ class DefaultController extends AbstractController
      */
     public function mentionlegale()
     {
-        return $this->render("Front/default/mentionslegales.html.twig");
+        return $this->render("Front/default/mentionslegales.html.twig",[
+            'bg' => "bg_carte",
+        ]);
     }
 
     /**
@@ -44,7 +48,9 @@ class DefaultController extends AbstractController
      */
     public function cgv()
     {
-        return $this->render("Front/default/cgv.html.twig");
+        return $this->render("Front/default/cgv.html.twig",[
+        'bg' => "bg_carte",
+    ]);
     }
 
     /**
@@ -57,7 +63,9 @@ class DefaultController extends AbstractController
         if (false === $authChecker->isGranted('ROLE_USER')) {
             throw new AccessDeniedException('Unable to access this page!');
         }
-        return $this->render("Front/default/profil.html.twig");
+        return $this->render("Front/default/profil.html.twig",[
+            'bg' => "bg_carte",
+        ]);
     }
 
     /**
@@ -67,7 +75,9 @@ class DefaultController extends AbstractController
      */
     public function team()
     {
-        return $this->render("Front/default/team.html.twig");
+        return $this->render("Front/default/team.html.twig",[
+            'bg' => "bg_carte",
+        ]);
     }
 
     /**
@@ -77,7 +87,9 @@ class DefaultController extends AbstractController
      */
     public function contact()
     {
-        return $this->render("Front/default/contact.html.twig");
+        return $this->render("Front/default/contact.html.twig",[
+            'bg' => "bg_carte",
+        ]);
     }
 
     /**
@@ -87,7 +99,9 @@ class DefaultController extends AbstractController
      */
     public function carte()
     {
-        return $this->render("Front/default/carte.html.twig");
+        return $this->render("Front/default/carte.html.twig",[
+            'bg' => "bg_carte",
+        ]);
     }
 
 }
