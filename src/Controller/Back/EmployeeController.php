@@ -20,7 +20,9 @@ class EmployeeController extends AbstractController
      */
     public function index(EmployeeRepository $employeeRepository): Response
     {
-        return $this->render('Back/employee/index.html.twig', ['employees' => $employeeRepository->findAll()]);
+        return $this->render('Back/employee/index.html.twig', ['employees' => $employeeRepository->findAll(),
+            'bg' => "bg_carte",
+        ]);
     }
 
     /**
@@ -43,6 +45,7 @@ class EmployeeController extends AbstractController
         return $this->render('Back/employee/new.html.twig', [
             'employee' => $employee,
             'form' => $form->createView(),
+            'bg' => "bg_carte",
         ]);
     }
 
@@ -51,7 +54,9 @@ class EmployeeController extends AbstractController
      */
     public function show(Employee $employee): Response
     {
-        return $this->render('Back/employee/show.html.twig', ['employee' => $employee]);
+        return $this->render('Back/employee/show.html.twig', ['employee' => $employee,
+            'bg' => "bg_carte",
+        ]);
     }
 
     /**
@@ -71,6 +76,7 @@ class EmployeeController extends AbstractController
         return $this->render('Back/employee/edit.html.twig', [
             'employee' => $employee,
             'form' => $form->createView(),
+            'bg' => "bg_carte",
         ]);
     }
 

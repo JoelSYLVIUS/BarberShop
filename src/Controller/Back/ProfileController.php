@@ -20,7 +20,9 @@ class ProfileController extends AbstractController
      */
     public function index(ProfileRepository $profileRepository): Response
     {
-        return $this->render('Back/profile/index.html.twig', ['profiles' => $profileRepository->findAll()]);
+        return $this->render('Back/profile/index.html.twig', ['profiles' => $profileRepository->findAll(),
+            'bg' => "bg_carte",
+        ]);
     }
 
     /**
@@ -43,6 +45,7 @@ class ProfileController extends AbstractController
         return $this->render('Back/profile/new.html.twig', [
             'profile' => $profile,
             'form' => $form->createView(),
+            'bg' => "bg_carte",
         ]);
     }
 
@@ -51,7 +54,9 @@ class ProfileController extends AbstractController
      */
     public function show(Profile $profile): Response
     {
-        return $this->render('Back/profile/show.html.twig', ['profile' => $profile]);
+        return $this->render('Back/profile/show.html.twig', ['profile' => $profile,
+            'bg' => "bg_carte",
+        ]);
     }
 
     /**
@@ -71,6 +76,7 @@ class ProfileController extends AbstractController
         return $this->render('Back/profile/edit.html.twig', [
             'profile' => $profile,
             'form' => $form->createView(),
+            'bg' => "bg_carte",
         ]);
     }
 

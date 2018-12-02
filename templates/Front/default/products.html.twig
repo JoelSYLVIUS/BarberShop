@@ -1,0 +1,133 @@
+{% extends "base.html.twig" %}
+
+{% block title %}BarberShop - Products{% endblock %}
+
+{% block body %}
+    <div class="container margtop margbot">
+        <h1 class="center Oxygen gold black padtop padbot borrad">Nos produits</h1>
+
+        <div class="row">
+            <div class="col s12 black borrad">
+                <ul id="tabs-swipe-demo" class="tabs black">
+                    <li class="tab col s6"><a class="gold" href="#test1">Produits pour vos cheveux</a></li>
+                    <li class="tab col s6"><a class="gold" class="active" href="#test2">Outils pour vos cheveux</a></li>
+                </ul>
+            </div>
+            <div id="test1" class="col s12"><section class="row">
+                    <div class="row">
+                        <div class="col s12 m6 l4">
+                            <div class="card hoverable">
+                                <div class="card-image">
+                                    <img src="{{ asset('medias/barber.jpg') }}">
+                                    <span class="card-title greatvibes gold">Produits 1</span>
+                                    <!--  <a class="btn-floating halfway-fab waves-effect waves-light black"><i class="material-icons">add</i></a> -->
+                                </div>
+                                <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <div class="card hoverable">
+                                <div class="card-image">
+                                    <img src="{{ asset('medias/barber.jpg') }}">
+                                    <span class="card-title greatvibes gold">Produits 2</span>
+                                    <!--  <a class="btn-floating halfway-fab waves-effect waves-light black"><i class="material-icons">add</i></a> -->
+                                </div>
+                                <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <div class="card hoverable">
+                                <div class="card-image">
+                                    <img src="{{ asset('medias/barber.jpg') }}">
+                                    <span class="card-title greatvibes gold">Produits 3</span>
+                                    <!--  <a class="btn-floating halfway-fab waves-effect waves-light black"><i class="material-icons">add</i></a> -->
+                                </div>
+                                <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <div class="card hoverable">
+                                <div class="card-image">
+                                    <img src="{{ asset('medias/barber.jpg') }}">
+                                    <span class="card-title greatvibes gold">Produits 4</span>
+                                    <!--  <a class="btn-floating halfway-fab waves-effect waves-light black"><i class="material-icons">add</i></a> -->
+                                </div>
+                                <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="test2" class="col s12"><section class="row">
+                    <div class="row">
+                        <div class="col s12 m6 l4">
+                            <div class="card hoverable">
+                                <div class="card-image">
+                                    <img src="{{ asset('medias/barber.jpg') }}">
+                                    <span class="card-title greatvibes gold">Outils 1</span>
+                                    <!--  <a class="btn-floating halfway-fab waves-effect waves-light black"><i class="material-icons">add</i></a> -->
+                                </div>
+                                <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <div class="card hoverable">
+                                <div class="card-image">
+                                    <img src="{{ asset('medias/barber.jpg') }}">
+                                    <span class="card-title greatvibes gold">Outils 2</span>
+                                    <!--  <a class="btn-floating halfway-fab waves-effect waves-light black"><i class="material-icons">add</i></a> -->
+                                </div>
+                                <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <div class="card hoverable">
+                                <div class="card-image">
+                                    <img src="{{ asset('medias/barber.jpg') }}">
+                                    <span class="card-title greatvibes gold">Outils 3</span>
+                                    <!--  <a class="btn-floating halfway-fab waves-effect waves-light black"><i class="material-icons">add</i></a> -->
+                                </div>
+                                <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <div class="card hoverable">
+                                <div class="card-image">
+                                    <img src="{{ asset('medias/barber.jpg') }}">
+                                    <span class="card-title greatvibes gold">Outils 4</span>
+                                    <!--  <a class="btn-floating halfway-fab waves-effect waves-light black"><i class="material-icons">add</i></a> -->
+                                </div>
+                                <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        $(document).ready(function(){
+        $('.tabs').tabs();
+        });
+    </script>
+{% endblock %}

@@ -8,6 +8,13 @@ main {
     flex: 1 0 auto;
 }
 
+a.active{
+    color: #baa94a!important;
+}
+.borrad{
+    border-radius: 10px;
+}
+
 .fix{
     position: fixed;
     z-index: 10000000;
@@ -52,6 +59,11 @@ main {
 
 .login_bg{
     background-color: #ffffff;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.pad{
     padding: 2%;
     border-radius: 10px;
 }
@@ -149,6 +161,6 @@ header{
     position: fixed;
     bottom: 0!important;
     margin-bottom: 0;
-    z-index: 0;
+    z-index: 100;
 }
 

@@ -3,8 +3,51 @@
 {% block title %}BarberShop - Profile{% endblock %}
 
 {% block body %}
-    <div class="container margtop">
+    <div class="container margtop margbot login_bg">
         <h1 class="center">Profile</h1>
+        <section>
+            <div class="row">
+                <div class="col l6 m6 s10 center">
+                    <img class="responsive circle" src="{{ asset('medias/barber.jpg') }}" alt="test" width="150px" height="150px">
+                    <div class="row">
+                        <a href="{#{ path('profile_edit', {'id': profil.id}) }#}" class="grey-text">
+                            <i class="material-icons small">
+                                settings
+                            </i>
+                        </a>
+                    </div>
+
+                    <p>Joël</p>
+                    <p>SYLVIUS</p>
+                    <p>Née le :<br> 18/04/1991</p>
+                </div>
+                <div class="col l6 m6 s2 right-text">
+                    <img class="responsive-img" src="{{ asset('medias/haircut.png') }}" alt="">
+                </div>
+                <div class="col l12 m12 s12">
+                    <h2>Mes réservations</h2>
+                    <table class="striped highlight">
+                        <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Coiffeur</th>
+                            <th>Coupe</th>
+                            <th>Durée</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>03/12/18</td>
+                            <td>Marcus</td>
+                            <td>Dégradé</td>
+                            <td>1h</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
     </div>
 
 {% endblock %}

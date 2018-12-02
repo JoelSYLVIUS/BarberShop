@@ -104,4 +104,28 @@ class DefaultController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route(path="/products", methods={"GET"})
+     *
+     * @return string
+     */
+    public function products()
+    {
+        return $this->render("Front/default/products.html.twig",[
+            'bg' => "bg_carte",
+        ]);
+    }
+
+    /**
+     * @Route(path="/galerie", methods={"GET"})
+     *
+     * @return string
+     */
+    public function galerie()
+    {
+        return $this->render("Front/default/galerie.html.twig",[
+            'bg' => "bg_carte",
+        ]);
+    }
+
 }
