@@ -3,47 +3,41 @@
 {% block title %}BarberShop - Accueil{% endblock %}
 
 {% block body %}
-    <section class="affichef">
+    <section class="affichef hoverable">
         <div class="carousel carousel-slider" data-indicators="true">
-            <div class="carousel-fixed-item">
-                <div class="container">
-                    <h1 class="white-text">Materialize Carousel</h1>
-
-                </div>
-            </div>
-            <div class="carousel-item red-crsl lighten-2 white-text" href="#one!">
+            <!-- <div class="carousel-item red-crsl lighten-2 white-text" href="#one!">
                 <div class="container accueil">
                     <h2 class="left gold">Bienvenue</h2>
-                    <p class="left white-text">Le meilleur Barber de Paris</p>
+                    <p class="left white-text">Le meilleurs salon barber de Paris!</p>
                 </div>
-            </div>
+            </div> -->
             <div class="carousel-item amber-crsl darken-2 white-text" href="#two!">
                 <div class="container accueil">
-                    <h2 class="left gold">Réserve ta coupe</h2>
-                    <p class="left white-text">Réserve ton créneau, choisi ta coupe et ton coiffeur!</p>
+                    <h2 class="left gold borrad">Bienvenue !</h2>
+                    <p class="left white-text borrad">Le meilleurs salon barber de Paris !<br> Réserve ton créneau, choisi ta coupe et ton coiffeur!</p>
                 </div>
             </div>
             <div class="carousel-item green-crsl  white-text" href="#three!">
                 <div class="container accueil">
-                    <h2 class="left gold">Third Slide</h2>
-                    <p class="left white-text">Etiam porta sem malesuada magna mollis euismod.</p>
+                    <h2 class="left gold borrad">Produits de qualités</h2>
+                    <p class="left white-text borrad">Nous utilisons des produits de qualités pour vos cheveux.</p>
                 </div>
             </div>
             <div class="carousel-item blue-crsl white-text" href="#four!">
                 <div class="container accueil">
-                    <h2 class="left gold">Fourth Slide</h2>
-                    <p class="left white-text">Etiam porta sem malesuada magna mollis euismod.</p>
+                    <h2 class="left gold borrad">Outils du Barber</h2>
+                    <p class="left white-text borrad">Nous faisons du bon travail grâce à notre talen mais aussi grâce à nos outils.</p>
                 </div>
             </div>
         </div>
     </section>
-    <div class="affichef">
+   <!--  <div class="affichef">
         <div class="container accueil">
             <h1 class="left gold">Bienvenue</h1>
             <p class="left white-text">Le meilleur Barber de Paris</p>
         </div>
-    </div>
-    <header>
+    </div> -->
+    <header class="white z-depth-3 padtop padbot">
         <div class="container row">
             <section class="col l4 center">
                 <p class="oxigen">Réserver votre jour et votre heure</p>
@@ -59,6 +53,142 @@
             </section>
         </div>
     </header>
+    <section class="white center padtop padbot">
+        <div class="container">
+            <h2 class="greatvibes gold">Nos produits</h2>
+            <p class="oxygen">Découvrer la listes des produits que nous utilisons dans  notre salon !</p>
+            <div class="row">
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ asset('medias/barber.jpg')}}">
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ asset('medias/barber.jpg')}}">
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ asset('medias/barber.jpg')}}">
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ asset('medias/barber.jpg')}}">
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="white center padtop padbot">
+        <div class="container">
+            <h2 class="greatvibes gold">Nos outils</h2>
+            <p class="oxygen">Découvrer les tondeuses et autres outils que nous utilisons dans  notre salon !</p>
+            <div class="row">
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ asset('medias/barber.jpg')}}">
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ asset('medias/barber.jpg')}}">
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ asset('medias/barber.jpg')}}">
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ asset('medias/barber.jpg')}}">
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}
 

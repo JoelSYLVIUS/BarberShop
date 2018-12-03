@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         {% block stylesheets %}{% endblock %}
     </head>
-    <body>
+    <body class="{{ bg }}">
 
 
         <nav class="transparent fix gold">
@@ -17,7 +17,10 @@
                     <a href="/" class="brand-logo">Logo</a>
                     <ul class="right hide-on-med-and-down">
                         <li><a class="gold gh" href="/team">Team</a></li>
-                        <li><a class="gold gh" href="/carte">Carte</a></li>
+                        <li><a class="gold gh" href="/carte">Card</a></li>
+                        <li><a class="gold gh" href="/admin/reservation/">Reservation</a></li>
+                        <li><a class="gold gh" href="/products">Products</a></li>
+                        <li><a class="gold gh" href="/galerie">Galerie</a></li>
                         <li><a class="gold gh" href="/contact">Contact</a></li>
                         <!-- Dropdown Trigger -->
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons gold right">account_circle</i></a></li>
@@ -30,6 +33,8 @@
                 {% endif %}
                 {% if app.user is not null %}
                     <li class="center"><a class="gold" href="/profil">Profil de {{ app.user.username }}<i class="material-icons gold right">account_circle</i></a></li>
+                    <!-- <li class="center"><a class="gold" href="{#{ path('profile_show') }#}">Profil de {#{ app.user.username }#}<i class="material-icons gold right">account_circle</i></a></li> -->
+
                     <li class="divider"></li>
                     <li class="center"><a class="gold" href="/logout">Déconnexion<i class="material-icons gold right">lock</i></a></li>
                 {% endif %}

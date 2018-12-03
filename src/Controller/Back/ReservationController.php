@@ -20,7 +20,9 @@ class ReservationController extends AbstractController
      */
     public function index(ReservationRepository $reservationRepository): Response
     {
-        return $this->render('Front/reservation/index.html.twig', ['reservations' => $reservationRepository->findAll()]);
+        return $this->render('Front/reservation/index.html.twig', ['reservations' => $reservationRepository->findAll(),
+            'bg' => "bg_carte",
+        ]);
     }
 
     /**
@@ -43,6 +45,7 @@ class ReservationController extends AbstractController
         return $this->render('Front/reservation/new.html.twig', [
             'reservation' => $reservation,
             'form' => $form->createView(),
+            'bg' => "bg_carte",
         ]);
     }
 
@@ -51,7 +54,9 @@ class ReservationController extends AbstractController
      */
     public function show(Reservation $reservation): Response
     {
-        return $this->render('Front/reservation/show.html.twig', ['reservation' => $reservation]);
+        return $this->render('Front/reservation/show.html.twig', ['reservation' => $reservation,
+            'bg' => "bg_carte",
+        ]);
     }
 
     /**
@@ -71,6 +76,7 @@ class ReservationController extends AbstractController
         return $this->render('Front/reservation/edit.html.twig', [
             'reservation' => $reservation,
             'form' => $form->createView(),
+            'bg' => "bg_carte",
         ]);
     }
 

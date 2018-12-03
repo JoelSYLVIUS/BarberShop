@@ -20,7 +20,9 @@ class CoupeController extends AbstractController
      */
     public function index(CoupeRepository $coupeRepository): Response
     {
-        return $this->render('Back/coupe/index.html.twig', ['coupes' => $coupeRepository->findAll()]);
+        return $this->render('Back/coupe/index.html.twig', ['coupes' => $coupeRepository->findAll(),
+            'bg' => "bg_carte",
+        ]);
     }
 
     /**
@@ -43,6 +45,7 @@ class CoupeController extends AbstractController
         return $this->render('Back/coupe/new.html.twig', [
             'coupe' => $coupe,
             'form' => $form->createView(),
+            'bg' => "bg_carte",
         ]);
     }
 
@@ -51,7 +54,9 @@ class CoupeController extends AbstractController
      */
     public function show(Coupe $coupe): Response
     {
-        return $this->render('Back/coupe/show.html.twig', ['coupe' => $coupe]);
+        return $this->render('Back/coupe/show.html.twig', ['coupe' => $coupe,
+            'bg' => "bg_carte",
+        ]);
     }
 
     /**
@@ -71,6 +76,7 @@ class CoupeController extends AbstractController
         return $this->render('Back/coupe/edit.html.twig', [
             'coupe' => $coupe,
             'form' => $form->createView(),
+            'bg' => "bg_carte",
         ]);
     }
 
