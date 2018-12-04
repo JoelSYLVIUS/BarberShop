@@ -3,7 +3,7 @@
 // src/Controller/RegistrationController.php
 namespace App\Controller;
 
-use App\Form\UserType;
+use App\Form\RegisterType;
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,7 +19,7 @@ class RegistrationController extends AbstractController
     {
         // 1) build the form
         $user = new User();
-        $form = $this->createForm(UserType::class, $user);
+        $form = $this->createForm(RegisterType::class, $user);
 
         // 2) handle the submit (will only happen on POST)
         $form->handleRequest($request);

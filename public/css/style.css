@@ -50,11 +50,7 @@ a.active{
 .bg_carte{
     width: 100vw;
     height: 100vh;
-    background-image: url("../medias/barber.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: #eeeeee;
 }
 
 .login_bg{
