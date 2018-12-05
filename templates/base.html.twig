@@ -6,8 +6,14 @@
         <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Oxygen" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-        {% block stylesheets %}{% endblock %}
+
+        {% block stylesheets %}
+            {# 'app' must match the first argument to addEntry() in webpack.config.js #}
+            {{ encore_entry_link_tags('app') }}
+
+            <!-- Renders a link tag (if your module requires any CSS)
+                 <link rel="stylesheet" src="/build/app.css"> -->
+        {% endblock %}
     </head>
     <body class="{{ bg }}">
 
@@ -61,6 +67,12 @@
                 $(".dropdown-trigger").dropdown();
             })
         </script>
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+
+            <!-- Renders app.js & a webpack runtime.js file
+                <script src="/build/runtime.js"></script>
+                <script src="/build/app.js"></script> -->
+        {% endblock %}
     </body>
 </html>
