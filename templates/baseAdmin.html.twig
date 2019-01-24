@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Oxygen" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        {% block stylesheets %}
+            {# 'app' must match the first argument to addEntry() in webpack.config.js #}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+        <div class="row">
+            <div class="col l3">
+                    <div class="black">
+                        <ul id="slide-out" class="side-nav fixed center">
+                            <li><a href="#!">Logo</a></li>
+                            <li ><a class="gold" href="/">Back</a></li>
+                            <li ><a class="gold" href="{{ path('reservation_index') }}">Réservations clients</a></li>
+                            <li ><a class="gold" href="#!">Coupes</a></li>
+                            <li ><a class="gold" href="#!">Employés</a></li>
+                            <li class="no-padding">
+                                <ul class="collapsible collapsible-accordion">
+                                    <li>
+                                        <a class="collapsible-header gold">Dropdown<i class="material-icons">arrow_drop_down</i></a>
+                                        <div class="collapsible-body">
+                                            <ul>
+                                                <li ><a class="gold" href="#!">First</a></li>
+                                                <li ><a class="gold" href="#!">Second</a></li>
+                                                <li ><a class="gold" href="#!">Third</a></li>
+                                                <li ><a class="gold" href="#!">Fourth</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="col l9">
+                <div class="margbot">
+                    {% block body %}{% endblock %}
+                </div>
+                <!-- Footer générale du site -->
+                <footer class="page-footer transparent">
+                    <div class="footer-copyright black">
+                        <div class="container center gold">
+                            © 2018 Tous Droits Réservés&nbsp;-
+                            <a class="gold gh" href="/mentions-legales">Mentions Légales</a> &nbsp;- <a class="gold gh" href="/cgv">CGV</a> &nbsp;
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            $('.button-collapse').sideNav({
+                    menuWidth: 300, // Default is 300
+                    edge: 'left', // Choose the horizontal origin
+                    closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                    draggable: true // Choose whether you can drag to open on touch screens,
+                }
+            );
+        </script>
+    </body>
+</html>
