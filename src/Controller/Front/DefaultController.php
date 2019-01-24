@@ -81,12 +81,27 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route(path="/contact", methods={"GET"})
+     * @Route(path="/contact", methods={"POST", "GET"})
      *
      * @return string
      */
-    public function contact()
+    public function contact(\Swift_Mailer $mailer)
     {
+        if(isset($_POST["message"])) {
+            $message = (new \Swift_Message($_POST["subject"]))
+                ->setFrom($_POST["email"])
+                ->setTo('admin@example.com')
+                ->setBody(
+                    $this->renderView(
+                        // templates/emails/registration.html.twig
+                        'Email/contact.html.twig',
+                        ['content' => $_POST["message"]]
+                    ),
+                    'text/html'
+            );
+
+            $mailer->send($message);
+        }
         return $this->render("Front/default/contact.html.twig",[
             'bg' => "bg_carte",
         ]);
