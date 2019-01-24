@@ -123,6 +123,33 @@ class DefaultController extends AbstractController
      */
     public function galerie()
     {
+        $auth = new Instagram\Auth([
+            'client_id'     => '537a54b77e374c5e8edc8990282a2dcc',
+            'client_secret' => 'cd7968032894480f8c1107bd219d61a3',
+            'redirect_uri'  => 'http://127.0.0.1:8000/galerie'
+        ]);
+
+        if(!isset($_SESSION['instagram_token'])){
+            if(!isset($_GET['code'])){
+                $auth->authorize();
+            } else {
+                $access_token = $auth->getAccessToken($_GET['code']);
+                $_SESSION['instagram_token'] = $access_token;
+            }
+        }
+
+        try{
+            $instagram = new Instagram\Instagram();
+            $instagram->setAccessToken($_SESSION['instagram_token']);
+            $medias = $instagram->getCurrentUser()->getMedia(['count' => 3]);
+        } catch(Exception $e) {
+            die($e->getMessage());
+        }
+        foreach($medias as $media){
+            if ($media->type == 'image') {
+                echo "<img src='{$media->images->standard_resolution->url}' width='100'>";
+            }
+        }
         return $this->render("Front/default/galerie.html.twig",[
             'bg' => "bg_carte",
         ]);

@@ -160,3 +160,7 @@ header{
     z-index: 100;
 }
 
+#slide-out li{
+    height: 70px;
+    line-height: 70px;
+}
