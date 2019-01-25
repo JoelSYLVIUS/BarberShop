@@ -160,3 +160,6 @@ header{
     z-index: 100;
 }
 
+.image-wrapper{
+    margin-left: 40px!important;
+}
