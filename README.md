@@ -38,7 +38,7 @@ Here is the list of all the collaborators :
 
 Rudy LANTOARIJAONA
 
-Yann NOUVE
+* **Yann NOUVE** - *Full stack*
 
 Antoine LUCAS
 

@@ -7,16 +7,16 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         {% block stylesheets %}
             {# 'app' must match the first argument to addEntry() in webpack.config.js #}
             {{ encore_entry_link_tags('app') }}
-
-            <!-- Renders a link tag (if your module requires any CSS)
-                 <link rel="stylesheet" src="/build/app.css"> -->
         {% endblock %}
     </head>
-    <body class="{{ bg }}">
-
+    <body>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
 
         <nav class="transparent fix gold">
                 <div class="nav-wrapper black mnmargrl">
@@ -67,6 +67,7 @@
                 $(".dropdown-trigger").dropdown();
             })
         </script>
+
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
 
@@ -74,5 +75,6 @@
                 <script src="/build/runtime.js"></script>
                 <script src="/build/app.js"></script> -->
         {% endblock %}
+
     </body>
 </html>
