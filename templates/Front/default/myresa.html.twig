@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Reservation index{% endblock %}
+
+{% block body %}
+    <div class="container margtop margbot">
+        <h1 class="center Oxygen gold black padtop padbot borrad">Espace réservation</h1>
+
+        <h2>Vous souhaitez prendre rendez-vous ? N'hésiter pas!</h2>
+        <p>Gratuitement, paiement sur place, réponse rapide</p>
+
+        <button class="btn waves-effect waves-light black">
+            <a class="gold" href="{{ path('reservation_new') }}">Prendre rendez-vous<i class="material-icons right">send</i></a>
+        </button>
+    </div>
+{% endblock %}
