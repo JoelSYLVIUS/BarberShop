@@ -163,3 +163,8 @@ header{
 .image-wrapper{
     margin-left: 40px!important;
 }
+
+#slide-out li{
+    height: 70px;
+    line-height: 70px;
+}
